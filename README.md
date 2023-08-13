@@ -1,4 +1,3 @@
-b
 
 <html lang="ar">
 <head>
